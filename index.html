@@ -60,7 +60,7 @@ body { background: var(--ground); color: var(--text); font-family: var(--font-ui
 </div>
 <div id="banner" hidden></div>
 
-<script src="Build/Web.loader.js?v=0.5.1"></script>
+<script src="Build/Web.loader.js?v=0.5.2"></script>
 <script>
 (() => {
   const $ = id => document.getElementById(id);
@@ -88,13 +88,13 @@ body { background: var(--ground); color: var(--text); font-family: var(--font-ui
     arguments: [],
     // The host serves only standard web types, so the gzipped files carry .wasm names;
     // the loader recognises Unity's gzip marker and unpacks them itself.
-    dataUrl: 'Build/Web.data.wasm?v=0.5.1',
-    frameworkUrl: 'Build/Web.framework.js?v=0.5.1',
-    codeUrl: 'Build/Web.wasm?v=0.5.1',
+    dataUrl: 'Build/Web.data.wasm?v=0.5.2',
+    frameworkUrl: 'Build/Web.framework.js?v=0.5.2',
+    codeUrl: 'Build/Web.wasm?v=0.5.2',
     streamingAssetsUrl: 'StreamingAssets',
     companyName: 'Yossi Vatori',
     productName: 'UnderDig',
-    productVersion: '0.5.1',
+    productVersion: '0.5.2',
     showBanner,
     // No devicePixelRatio override: Unity renders at the screen's own density (3x on iPhone) for a sharp picture.
     matchWebGLToCanvasSize: true,
