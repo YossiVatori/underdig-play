@@ -4,9 +4,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="UnderDig: drive a drill truck, dig deep, sell the ore. Plays in the browser on phone or computer.">
+<meta name="description" content="Underground Mine: drive a drill truck, dig deep, sell the ore. Plays in the browser on phone or computer.">
 <style>body{margin:0}[hidden]{display:none!important}</style>
-<title>UnderDig</title>
+<title>Underground Mine</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Barlow+Condensed:wght@600;700&display=swap">
 <style>
@@ -33,7 +33,7 @@ body { background: var(--ground); color: var(--text); font-family: var(--font-ui
 #splash { position: fixed; inset: 0; display: grid; place-items: center; background: var(--ground);
   padding: 24px max(16px, env(safe-area-inset-right, 0px)) 24px max(16px, env(safe-area-inset-left, 0px)); }
 .plate { width: min(320px, 100%); display: grid; gap: 14px; text-align: center; }
-.logo { margin: 0; font: 400 clamp(40px, 13vw, 60px)/0.95 var(--font-display); color: var(--hazard);
+.logo { margin: 0; font: 400 clamp(28px, 9.5vw, 38px)/1.05 var(--font-display); color: var(--hazard);
   text-shadow: 0 4px 0 #6b4d00, 0 8px 24px #000; letter-spacing: .01em; }
 .tag { margin: -4px 0 0; font: 600 16px var(--font-ui); letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
 .bar { height: 12px; background: var(--ink); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
@@ -47,11 +47,11 @@ body { background: var(--ground); color: var(--text); font-family: var(--font-ui
 @media (prefers-reduced-motion: reduce) { .bar i { transition: none; } }
 </style>
 
-<div id="stage"><canvas id="unity-canvas" tabindex="-1" aria-label="UnderDig game"></canvas></div>
+<div id="stage"><canvas id="unity-canvas" tabindex="-1" aria-label="Underground Mine game"></canvas></div>
 
 <div id="splash">
   <div class="plate">
-    <h1 class="logo">UNDER<br>DIG</h1>
+    <h1 class="logo">UNDERGROUND<br>MINE</h1>
     <p class="tag">Dig deep. Get rich.</p>
     <div class="bar" role="progressbar" aria-label="Loading" aria-valuemin="0" aria-valuemax="100"><i id="fill"></i></div>
     <p id="status">Loading the drill truck…</p>
@@ -60,7 +60,7 @@ body { background: var(--ground); color: var(--text); font-family: var(--font-ui
 </div>
 <div id="banner" hidden></div>
 
-<script src="Build/Web.loader.js?v=0.5.5"></script>
+<script src="Build/Web.loader.js?v=0.5.6"></script>
 <script>
 (() => {
   const $ = id => document.getElementById(id);
@@ -88,13 +88,13 @@ body { background: var(--ground); color: var(--text); font-family: var(--font-ui
     arguments: [],
     // The host serves only standard web types, so the gzipped files carry .wasm names;
     // the loader recognises Unity's gzip marker and unpacks them itself.
-    dataUrl: 'Build/Web.data.wasm?v=0.5.5',
-    frameworkUrl: 'Build/Web.framework.js?v=0.5.5',
-    codeUrl: 'Build/Web.wasm?v=0.5.5',
+    dataUrl: 'Build/Web.data.wasm?v=0.5.6',
+    frameworkUrl: 'Build/Web.framework.js?v=0.5.6',
+    codeUrl: 'Build/Web.wasm?v=0.5.6',
     streamingAssetsUrl: 'StreamingAssets',
     companyName: 'Yossi Vatori',
-    productName: 'UnderDig',
-    productVersion: '0.5.5',
+    productName: 'Underground Mine',
+    productVersion: '0.5.6',
     showBanner,
     // No devicePixelRatio override: Unity renders at the screen's own density (3x on iPhone) for a sharp picture.
     matchWebGLToCanvasSize: true,
